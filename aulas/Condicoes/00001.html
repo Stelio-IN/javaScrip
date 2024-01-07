@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar idade</title>
+    <style>
+        div#res{
+            background: aqua;
+            color: black;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador Pro idade V1.0</h1>
+    Digite sua Idade <input type="number" name="txtidade" id="txtidade">km/h
+    <input type="button" value = 'verificar' onclick="verificar()">
+    <div id="res">Situacao 
+    </div>
+    
+    <h1>Verificador Mocambicanidade V1.0</h1>
+    Digite sua Idade <input type="text" name="txtnacio" id="txtnacio">km/h
+    <input type="button" value = 'verificar' onclick="verificarMoz()">
+    <div id="resp">Situacao 
+    </div>
+    <script>
+
+     function verificar(){
+        var a = document.querySelector('input#txtidade')
+        var b = document.querySelector('div#res')
+        var n = Number(a.value)
+        if(n<0){
+            b.innerHTML = 'Idade Invalida'
+            b.style.background = 'red'
+        } else{
+            if(n>=110){
+                b.innerHTML = 'Tu e o Thanos'
+                b.style.background = 'red'
+            }else{
+                b.innerHTML = n>=18? 'Maior':'Menor'
+                b.style.background = 'green'
+            }
+        }
+     }
+     function verificarMoz(){
+        var a = document.querySelector('input#txtnacio')
+        var b = document.querySelector('div#resp')
+        var n = a.value
+        if(n=='Moz'){
+            b.innerHTML = 'You are Mozabican'
+        } else{
+            b.innerHTML = 'You are not Mozabican'
+        }
+        b.innerHTML = n=='Moz'? 'You are Mozabican':'You are not Mozabican'
+     }
+    </script>
+</body>
+</html>

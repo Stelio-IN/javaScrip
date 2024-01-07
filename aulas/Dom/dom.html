@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de DOM</title>
+    <style>
+        body{   
+            background: black;
+            color:aqua;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>O que e DOM</h1>
+    <p><strong>DOM </strong> e um acronimo para Document Object Model, modelo de
+    objectos para documentos! conjunto de objectos que dara acesso para componentes internos 
+em um site</p>
+    <h2>Arvore DOM</h2>
+    <p>window{location,document,history......}</p>
+    <p>document{html}</p>
+    <p>html{head,body}</p>
+    <p>head{meta,title}</p>
+    <p>body{h1,p,div,nav,section...}</p>
+    
+
+    <div id="msg1">Clique em mim</div>
+    <div name="msg">Div Dois</div>
+    <div class = "msg2">Div dois</div>
+    
+    <div class = "msg3">Div Tres</div>
+    <div id = "msg4">Div quatro</div>
+    
+    <h2 style="color: black;">metodos de selecao</h2>
+    <p>Marca, ID, Nome, Classe, Seletor,</p>
+    <script>
+        /*
+       // Escrevendo direto o ficheiro html
+        window.document.write('Ola Mundo, Stelio')
+        window.document.write(document.charset)
+        window.document.write(navigator.appName)
+        window.document.write(document.URL)
+        */
+    
+        /*
+            Metodos de acesso
+            -Marca, document.getElementByTagName()[] - pega todos elementos da mesma tag
+            -ID, document.getElementById()
+            -Nome, document.getElementsByName()[]
+            -Classe, document.getElementByClasseName()
+            -Seletor, document.querySelector/All()
+        */
+
+     
+        var p1 = window.document.getElementsByTagName('p')[0]
+        //pegar o texto que esta no objecto
+        //alert(p1.innerText)
+      //  document.write(p1.innerText)
+        //Pegar com as tegs html
+      //  document.write(p1.innerHTML)
+        p1.style.color = 'red'
+        var body = document.body
+        body.style.background = "orange"
+        var d = window.document.getElementById('msg1')
+        d.style.color = 'green'
+        d.innerText = 'Involution@gmail.com'
+        var c  = window.document.getElementsByName('msg')[0]
+        c.innerText = 'Stelio'
+        c.style.color = 'white'
+
+        var f = document.getElementsByClassName('msg2')[0]
+        f.style.color = 'red' 
+        
+        var g = window.document.querySelector('div.msg3') //class *.*
+        var h = window.document.querySelector('div#msg4') // div *#*
+        g.style.color = 'white'
+        h.style.color = 'black'
+
+    </script>
+
+</body>
+</html>

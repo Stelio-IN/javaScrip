@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div#area {
+        font: normal 20pt Arial;
+        background: rgb(142, 212, 142);
+        color: white;
+        width: 200px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;     
+    }
+    div#name {
+        font: normal 20pt Arial;
+        background: black;
+        color: white;
+        width: 200px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;     
+    }
+</style>
+    
+</head>
+<body>
+    <div id = 'area' onclick="clicar()" onmouseenter="mouseON()" onmouseout="mouseOut()">
+        Interaja....
+    </div>
+
+    <br>
+    <div id = 'name'>
+        ListenerEvents
+    </div>
+    <script>
+        var area = document.getElementById('area')
+        function clicar(){ 
+            area.innerText = 'Stelio Involution'
+            area.style.background = 'red'
+        }
+
+        function mouseON(){
+            area.innerText = 'Entrou'
+        }
+
+        function mouseOut(){
+            area.innerText = 'Saiu'
+            area.style.background = 'green'
+        }
+
+
+        //EventListener
+        var a = window.document.getElementById('name')
+        var a = window.document.querySelector('div#name')
+        a.addEventListener('click',clicar)
+        a.addEventListener('mouseenter',mouseON)
+        a.addEventListener('mouseout',mouseOut)
+        function clicar(){ 
+            a.innerText = 'Stelio Involution'
+            a.style.background = 'red'
+        }
+        function mouseON(){
+            a.innerText = 'Entrou'
+        }
+
+        function mouseOut(){
+            a.innerText = 'Saiu'
+            a.style.background = 'green'
+        }
+
+
+    </script>
+</body>
+</html>
