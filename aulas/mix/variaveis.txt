@@ -1,0 +1,22 @@
+As diferenças entre var, let, e const em JavaScript estão relacionadas ao escopo,
+ à reatribuição de valores e
+ à criação de variáveis constantes. Aqui estão as principais distinções:
+
+Escopo:
+
+var tem escopo de função, o que significa que a variável é visível em toda a função onde foi declarada.
+let e const têm escopo de bloco, o que significa que a variável é visível apenas dentro do bloco onde 
+foi declarada (bloco é qualquer conjunto de chaves {}).
+
+Reatribuição de valores:
+
+Com var, você pode reatribuir valores.
+Com let, você também pode reatribuir valores.
+Com const, a variável é constante e não pode ser reatribuída após a inicialização.
+Hoisting:
+
+var sofre hoisting, o que significa que a declaração da variável é movida para o topo
+ de seu contexto antes da execução do código.
+let e const também são içadas (hoisted), mas 
+não são inicializadas até a linha em que são declaradas, resultando em um comportamento conhecido
+ como "temporal dead zone".

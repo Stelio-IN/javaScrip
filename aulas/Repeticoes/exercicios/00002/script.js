@@ -7,8 +7,10 @@ function gerartabuada(){
         let cont = 1
         tab.innerHTML =''
        while(cont<=12){
+        //criando um novo item para o select
             let item = document.createElement('option')
             item.text = `${n} x ${cont} = ${n*cont}`
+            //atribuindo idenf=tificadores para cada option
             item.value = `tab${cont}`
             tab.appendChild(item)
             cont++
