@@ -1,0 +1,7 @@
+Response Status Codes 
+    100 - respostas indormativas 
+    200 - codigos de sucesso
+    300 - Redicionamentos
+    400 - Erros de cliente ou utilizador
+    500 - Erros internos de servidor
+

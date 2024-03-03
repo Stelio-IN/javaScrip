@@ -1,0 +1,3 @@
+Ficheiros: 
+metodo *sincrono* sync e nao sync, sync fazem com que seja executada uma linha de cada vez ate passar pelo metodo depois ele segue o curso
+sem o metodo nao for sync precisa de uma call back function
