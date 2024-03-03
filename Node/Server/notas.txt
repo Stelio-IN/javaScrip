@@ -1,7 +1,17 @@
-Response Status Codes 
+Response Status Codes - ter cuidado de enviar as respostas  
     100 - respostas indormativas 
     200 - codigos de sucesso
     300 - Redicionamentos
     400 - Erros de cliente ou utilizador
     500 - Erros internos de servidor
 
+
+atualizar o servido em tempo real sem precisar reiniciar manualmente
+    - nodemon [nome.js]{
+            to install: npm install -g nodemon
+    }
+    - node --watch [nome.js]
+
+iniciar projecto{
+    npm init{npm start- inicia o server}
+}

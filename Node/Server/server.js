@@ -13,14 +13,26 @@ const server = http.createServer((req,res) =>{
     let html_file = '';
     switch (req.url) {
         case '/':
-            html_file = './html/index.html'
+            html_file = './views/index.html'
+            //sucesso
+            res.statusCode = 200
             break;
         case '/about':
-            html_file = './html/about.html'
+            //sucesso
+            html_file = './views/about.html'
+            res.statusCode = 200
+            break;
+        case '/acerca_de':
+            //redicionamento
+            res.setHeader('Location', '/about')
+            res.statusCode = 301
+            res.end()
             break;
     
         default:
-            html_file = './html/404.html'
+            html_file = './views/404.html'
+            //Erro
+            res.statusCode = 404
             break;
     }
     fs.readFile(html_file, (erro, data) =>{
