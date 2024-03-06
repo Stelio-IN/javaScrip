@@ -15,3 +15,5 @@ atualizar o servido em tempo real sem precisar reiniciar manualmente
 iniciar projecto{
     npm init{npm start- inicia o server}
 }
+
+npm install - instalar node_modules

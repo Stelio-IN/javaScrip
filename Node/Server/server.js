@@ -4,10 +4,12 @@ const host = 'localhost'
 const port = 3001;
 
 const fs = require('fs')
+const lodash = require('lodash')
 
 const server = http.createServer((req,res) =>{
     //header da resposta
     res.setHeader('Content-Type', 'text/html')
+    console.log(lodash.random(0,100))
 
     //sistema de roteamento
     let html_file = '';
@@ -43,7 +45,8 @@ const server = http.createServer((req,res) =>{
             res.end()
         }
     }) 
-})
+}) 
 server.listen(port, host, () =>{
     console.log('Servidor iniciado')
+
 })
