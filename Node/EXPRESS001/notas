@@ -1,0 +1,9 @@
+tamplete EJS 
+<%= %> usa como String
+<%- %> usa sem alteracao o conteudo recebido
+
+middleware - são partes do codigo que sáo executados entre o request e o envio das respostas.
+(Registro de logs/ funcionalidades de autenticacao/autorizacao / validacao e preparacao de dados JSON a partir do request / responder com erros da aplicacao)
+request() 
+servidor(app.get()/use())
+response()
