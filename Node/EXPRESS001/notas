@@ -7,3 +7,6 @@ middleware - são partes do codigo que sáo executados entre o request e o envio
 request() 
 servidor(app.get()/use())
 response()
+
+
+morgan

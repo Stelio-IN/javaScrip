@@ -1,5 +1,6 @@
 
 const express = require('express')
+var morgan = require('morgan')
 // criando uma aplicacao express
 const app = express()
 
@@ -40,6 +41,7 @@ app.use((req,res) =>{
 
 
 //**************************************************** */
+/*
 //middleware
 app.use((req, res, next) =>{
     console.log('Novo pedido: ');
@@ -55,24 +57,32 @@ app.use((req, res, next) =>{
     //para poder sair da metodo pois ele fica no loop
     next()
 })
+*/
+
+//middleware
+//tudo que estiver na pasta public vai poder ser servido diretamente em outro files...
+app.use(express.static('public'))
+app.use(morgan(' O metodo e: :method'))
+
 
 //**************************************************** */
 //Rotas
 app.get('/', (req,res) =>{
-    res.render('home',{title: "Casa", nome: "Stelio"})
+    res.render('home',{title: "Home", nome: "Stelio"})
 })
+
 app.get('/about', (req,res) =>{
     res.render('about',{title: "Acerca de"})
+
 })
 app.get('/services', (req,res) =>{
-    const servicos = []
-    /*
+   //const servicos = []
+    
     const servicos = [
         {titulo_servico: "Desenvolvimento WEB", discricao: "Fazemos apps e paginas web"},
         {titulo_servico: "Desenvolvimento Desktop", discricao: "Fazemos apps desktop"},
         {titulo_servico: "Desenvolvimento Mobile", discricao: "Fazemos apps e paginas Mobile"},
     ]
-    */
     res.render('services',{title: "Services",servicos})
 })
 //o use deve estar sempre no final pois depois de verificar e todas e nao encontrar deve direcionar
