@@ -1,0 +1,13 @@
+1- app.js
+2-npm install express{
+    on app.js - const express = require('express')
+           - const app = express() 
+           - app.listen(3000)
+    }
+
+
+
+?: '/ab?cd' -  acd abcd. valor antes do ? e opcional
++: '/ab+cd' -  abcd, abbcd, abbbcde. pode ter um ou varios b;
+*: '/ab*cd' -  abcd, abXcd, abSOMErandomTEXTcde. comecar com ab depois qualquer coisa terminar cd
+():'/ab(cd)?e' - abe e abcde. ()servem para agrupar 
