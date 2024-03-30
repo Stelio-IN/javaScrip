@@ -68,7 +68,10 @@ const fimDoJogo = () => {
   const cartaDesabilitadas = document.querySelectorAll(".desabilitar_carta");
 
   if (cartaDesabilitadas.length === 10) {
-    alert("Ganhaste essas batatas free");
+    setTimeout(() => {
+      alert("Ganhaste essas batatas free");
+      window.location.reload(); 
+    }, 500);
   }
 };
 const mostrar_carta = ({ target }) => {
